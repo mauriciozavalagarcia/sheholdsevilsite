@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+  background: url('assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #eee;
+  text-align: center;
+}
+
+header {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-style: italic;
+  color: #ccc;
+}
+
+button#darkToggle {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.tracks {
+  padding: 2rem;
+  background-color: rgba(20, 20, 20, 0.8);
+}
+
+.track {
+  margin-bottom: 2rem;
+}
+
+audio {
+  width: 80%;
+}
+
+footer {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 0.9rem;
+}
+
+/* Dark mode */
+.dark-mode {
+  background-color: #000;
+  background-image: none;
+  color: #ccc;
+}
