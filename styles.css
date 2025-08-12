@@ -1,58 +1,36 @@
-body {
+/* Reset default margins */
+body, html {
   margin: 0;
-  font-family: 'Share Tech Mono', monospace;
-  background: url('assets/background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #eee;
-  text-align: center;
+  padding: 0;
+  height: 100%;
+  background-color: #000; /* Black metal aesthetic */
 }
 
-header {
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
+/* Centering container */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Logo styling with fade-in animation */
 .logo {
-  width: 120px;
-  margin-bottom: 1rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  opacity: 0;
+  animation: fadeIn 2.5s ease-in-out forwards;
 }
 
-.tagline {
-  font-style: italic;
-  color: #ccc;
-}
-
-button#darkToggle {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #444;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.tracks {
-  padding: 2rem;
-  background-color: rgba(20, 20, 20, 0.8);
-}
-
-.track {
-  margin-bottom: 2rem;
-}
-
-audio {
-  width: 80%;
-}
-
-footer {
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-size: 0.9rem;
-}
-
-/* Dark mode */
-.dark-mode {
-  background-color: #000;
-  background-image: none;
-  color: #ccc;
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
