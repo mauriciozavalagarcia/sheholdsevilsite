@@ -1,9 +1,11 @@
-/* Reset default margins */
+/* Reset defaults */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #000; /* Black metal aesthetic */
+  background-color: #000; /* Black background */
+  font-family: 'Montserrat', sans-serif;
+  color: #fff; /* White text by default */
 }
 
 /* Centering container */
@@ -11,7 +13,9 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Flexible full height */
+  flex-direction: column;
+  text-align: center;
 }
 
 /* Logo styling with fade-in animation */
@@ -33,4 +37,82 @@ body, html {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Navigation */
+nav {
+  margin-top: 20px;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #aaa; /* Subtle gray */
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff; /* Highlight */
+  transform: scale(1.1);
+}
+
+/* Music section */
+.music-section {
+  margin-top: 40px;
+  text-align: center;
+  max-width: 1000px;
+}
+
+.music-section h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.music-section p {
+  margin-bottom: 30px;
+  color: #bbb;
+}
+
+/* Track grid */
+.track-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* space between items */
+  flex-wrap: wrap; /* wrap on smaller screens */
+  margin-top: 20px;
+}
+
+/* Individual track cards */
+.track {
+  flex: 1 1 300px;
+  max-width: 400px;
+  min-height: 200px; /* equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: #111; /* Dark card */
+  border: 1px solid #333;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.track h2 {
+  margin-bottom: 15px;
+  color: crimson;
+}
+
+/* Audio element dark theme */
+audio {
+  width: 100%;
+  filter: invert(1) grayscale(1) contrast(1.2); 
+  background: #000;
+  border-radius: 4px;
+}
+
+/* Add bottom spacing for the music page */
+.music-section {
+  margin-bottom: 80px; /* extra space at the bottom */
 }
