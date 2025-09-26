@@ -92,21 +92,24 @@ nav a:hover {
 .track {
   flex: 1 1 300px;
   max-width: 400px;
-  min-height: 200px; /* equal height */
+  /* min-height: 200px;  <-- remove this */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start; /* align content normally, no big gap */
   padding: 20px;
-  background: #111; /* Dark card */
+  background: #111;
   border: 1px solid #333;
   border-radius: 6px;
   text-align: center;
 }
 
+
 .track h2 {
-  margin-bottom: 15px;
-  color: crimson;
+  margin: 0 0 5px 0; /* no top margin, only 5px bottom */
+  font-size: 1.2rem; /* keep size readable */
+  line-height: 1.2;  /* tighten line spacing */
 }
+
 
 /* Audio element dark theme */
 audio {
