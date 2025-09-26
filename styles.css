@@ -43,20 +43,24 @@ body, html {
 nav {
   margin-top: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
+  width: 100%;
 }
 
 nav a {
   text-decoration: none;
-  color: #aaa; /* Subtle gray */
+  color: #aaa;
   font-size: 1.2rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
-  color: #fff; /* Highlight */
+  color: #fff;
   transform: scale(1.1);
 }
+
 
 /* Music section */
 .music-section {
