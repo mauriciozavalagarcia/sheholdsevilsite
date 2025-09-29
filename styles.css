@@ -20,11 +20,20 @@ body, html {
 
 /* Logo styling */
 .logo {
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 70vw;    /* narrower on desktop */
+  max-height: 40vh;   /* shorter on desktop */
   object-fit: contain;
   opacity: 0;
   animation: fadeIn 2.5s ease-in-out forwards;
+  margin: 20px auto;  /* balanced spacing */
+}
+
+/* Larger logo for mobile */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 90vw;
+    max-height: 60vh;
+  }
 }
 
 @keyframes fadeIn {
@@ -75,7 +84,7 @@ nav a:hover {
 /* Track grid */
 .track-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* wider min */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -107,7 +116,7 @@ nav a:hover {
 /* Audio player */
 audio {
   width: 100%;
-  min-width: 220px; /* safeguard */
+  min-width: 220px;
   height: 32px;
   filter: invert(1) grayscale(1) contrast(1.2);
   background: #000;
