@@ -72,14 +72,23 @@ nav a:hover {
   color: #bbb;
 }
 
+/* Track grid */
 .track-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* wider min */
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+/* Fallback for narrow screens */
+@media (max-width: 650px) {
+  .track-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual track cards */
 .track {
   padding: 15px;
   background: #111;
@@ -95,9 +104,10 @@ nav a:hover {
   color: crimson;
 }
 
+/* Audio player */
 audio {
   width: 100%;
-  min-width: 200px;
+  min-width: 220px; /* safeguard */
   height: 32px;
   filter: invert(1) grayscale(1) contrast(1.2);
   background: #000;
